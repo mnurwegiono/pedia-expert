@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PediaExpert – Chatbot Cerdas untuk Ahli Gizi Berbasis RAG</title>
+  <meta name="description" content="PediaExpert: chatbot gizi anak berbasis RAG. Bantu keputusan terapi gizi secara cepat, akurat, dan evidence-based." />
+  <link rel="canonical" href="https://www.pediaexpert.id/" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PediaExpert – Chatbot Cerdas untuk Ahli Gizi Berbasis RAG" />
+  <meta property="og:description" content="Bantu keputusan terapi gizi anak secara cepat, akurat, dan evidence-based." />
+  <meta property="og:image" content="assets/img/og-image.png" />
+  <meta property="og:url" content="https://www.pediaexpert.id/" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PediaExpert – Chatbot Cerdas untuk Ahli Gizi Berbasis RAG" />
+  <meta name="twitter:description" content="Bantu keputusan terapi gizi anak secara cepat, akurat, dan evidence-based." />
+  <meta name="twitter:image" content="assets/img/og-image.png" />
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Hospital blues */
+      --pe-primary: #1677ff;       /* bright hospital blue */
+      --pe-primary-600:#0f5ed6;    /* darker */
+      --pe-primary-700:#0b46a3;    /* dark */
+      --pe-accent: #22b8cf;        /* cyan accent */
+      --pe-bg: #f7fbff;            /* pale bg */
+      --pe-dark: #0b1b2b;          /* text dark */
+    }
+    html{scroll-behavior:smooth}
+    body{font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji','Segoe UI Emoji'; color:var(--pe-dark); background: var(--pe-bg);}    
+
+    /* Navbar */
+    .navbar{box-shadow: 0 8px 30px rgba(15, 94, 214, 0.06);}
+    .navbar .nav-link{font-weight:600}
+    .btn-pe{background: var(--pe-primary); color:#fff; border:none}
+    .btn-pe:hover{background: var(--pe-primary-600); color:#fff}
+
+    /* Hero */
+    .hero{
+      position: relative; isolation: isolate;
+      background: radial-gradient(1200px 600px at 80% 10%, rgba(34,184,207,.15), transparent 60%),
+                  radial-gradient(1000px 500px at 10% 0%, rgba(22,119,255,.18), transparent 60%);
+      padding-top: 7rem; padding-bottom: 5rem;
+    }
+    .hero h1{font-weight:800; letter-spacing:.2px}
+    .hero p.lead{color:#244; opacity:.9}
+    .hero-blob{
+      position:absolute; inset:0; z-index:-1; overflow:hidden;
+    }
+    .hero-blob svg{position:absolute; bottom:-1px; left:0; width:100%; height:auto;}
+
+    .feature-card{
+      background:#fff; border:0; border-radius:22px; padding:24px; height:100%;
+      box-shadow:0 10px 30px rgba(11,70,163,.08);
+    }
+
+    .step{
+      border-left: 4px solid var(--pe-primary);
+      background:#fff; border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.06);
+      padding:18px 18px 18px 22px;
+    }
+
+    /* Testimonial bubble */
+    .bubble{
+      background: linear-gradient(135deg, rgba(22,119,255,.12), rgba(34,184,207,.12));
+      border:1px solid rgba(22,119,255,.2); border-radius:20px; padding:28px;
+    }
+
+    /* Pricing */
+    .price-card{border:0; border-radius:28px; box-shadow:0 18px 50px rgba(11,70,163,.08)}
+    .price-card .card-header{background:linear-gradient(135deg, rgba(22,119,255,.1), rgba(34,184,207,.12)); border:0; border-top-left-radius:28px; border-top-right-radius:28px;}
+    .price-card .btn{border-radius:14px}
+
+    /* Team */
+    .team-card{border:0; border-radius:18px; box-shadow:0 12px 30px rgba(0,0,0,.06)}
+
+    /* Footer */
+    footer{background: linear-gradient(180deg, rgba(22,119,255,.08), rgba(34,184,207,.1));}
+
+    /* Utility */
+    .section{padding: 80px 0}
+    .icon-lg{width:52px; height:52px; display:inline-grid; place-items:center; border-radius:14px; background:linear-gradient(145deg, rgba(22,119,255,.1), rgba(34,184,207,.12)); color:var(--pe-primary-700)}
+
+    /* Mobile tweaks */
+    @media (max-width: 575.98px){
+      .hero{padding-top:6rem; padding-bottom:3rem}
+      .display-5{font-size:2rem}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top py-3">
+    <div class="container">
+      
+	  <a class="navbar-brand p-0 m-0 d-inline-flex align-items-center" href="#home">
+  <img src="assets/images/logopedia-expert.png" alt="PediaExpert Logo" height="80" style="width:auto;display:block">
+</a>
+	  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#features">Fitur</a></li>
+          <li class="nav-item"><a class="nav-link" href="#benefits">Manfaat</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Tim</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+        </ul>
+        <div class="ms-lg-3 mt-3 mt-lg-0 d-flex gap-2">
+          <a href="#demo" class="btn btn-outline-primary">Demo</a>
+          <a href="#get-started" class="btn btn-pe">Coba Sekarang</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <span class="badge text-bg-primary-subtle border border-primary mb-3"><i class="bi bi-stars me-1"></i> Launching Beta</span>
+          <h1 class="display-5 mb-3">PediaExpert – Chatbot Cerdas untuk Ahli Gizi Berbasis <span class="text-primary">RAG</span></h1>
+          <p class="lead mb-4">Bantu pengambilan keputusan terapi gizi pasien anak secara <strong>cepat</strong>, <strong>akurat</strong>, dan <strong>berbasis bukti ilmiah</strong> menggunakan teknologi Retrieval‑Augmented Generation.</p>
+          <div class="d-flex gap-2">
+            <a href="#get-started" class="btn btn-pe btn-lg"><i class="bi bi-rocket-takeoff me-2"></i>Mulai Gunakan</a>
+            <a href="#features" class="btn btn-outline-primary btn-lg"><i class="bi bi-info-circle me-2"></i>Pelajari Lebih Lanjut</a>
+          </div>
+          <div class="d-flex align-items-center gap-3 mt-4 small text-secondary">
+            <i class="bi bi-shield-check"></i> Berbasis evidence & panduan resmi
+            <span class="vr"></span>
+            <i class="bi bi-cloud-check"></i> Akses via web – tanpa instalasi
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <!-- Mockup area -->
+          <img class="img-fluid rounded-4 shadow" src="assets/images/banner-header.png" alt="Ilustrasi percakapan chatbot gizi" />
+          <small class="text-secondary d-block mt-2">Ilustrasi PediaExpert</small>
+        </div>
+      </div>
+    </div>
+    <div class="hero-blob" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path fill="#ffffff" d="M0,96L80,101.3C160,107,320,117,480,112C640,107,800,85,960,85.3C1120,85,1280,107,1360,117.3L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Fitur Utama</h2>
+        <p class="text-secondary">Dirancang untuk kebutuhan klinis harian, dengan UX yang sederhana dan aman.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-3">
+          <div class="feature-card h-100">
+            <div class="icon-lg mb-3"><i class="bi bi-activity"></i></div>
+            <h5 class="fw-bold">Analisis Gizi Otomatis</h5>
+            <p class="mb-0">Mengolah usia, berat, tinggi, dan kondisi medis pasien untuk menentukan kebutuhan gizi.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="feature-card h-100">
+            <div class="icon-lg mb-3"><i class="bi bi-journal-medical"></i></div>
+            <h5 class="fw-bold">Berbasis Evidence</h5>
+            <p class="mb-0">Rujukan literatur dan panduan gizi nasional/internasional yang terkini dan tepercaya.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="feature-card h-100">
+            <div class="icon-lg mb-3"><i class="bi bi-chat-dots"></i></div>
+            <h5 class="fw-bold">Chatbot Interaktif</h5>
+            <p class="mb-0">Percakapan natural seperti ChatGPT, memudahkan tenaga kesehatan berinteraksi.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="feature-card h-100">
+            <div class="icon-lg mb-3"><i class="bi bi-globe2"></i></div>
+            <h5 class="fw-bold">Akses Mudah</h5>
+            <p class="mb-0">Jalankan langsung di <strong>www.pediaexpert.id</strong> tanpa instalasi tambahan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS / STEPS -->
+  <section id="benefits" class="section pt-0">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <img class="img-fluid rounded-4 shadow" src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1400&auto=format&fit=crop" alt="Dashboard analitik gizi" />
+        </div>
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-4">Manfaat untuk Praktik Klinik</h2>
+          <div class="step mb-3">
+            <h6 class="mb-1"><span class="badge text-bg-primary me-1">1</span> Mempercepat Keputusan</h6>
+            <p class="mb-0 text-secondary">Mempercepat pengambilan keputusan terapi gizi pada pasien anak.</p>
+          </div>
+          <div class="step mb-3">
+            <h6 class="mb-1"><span class="badge text-bg-primary me-1">2</span> Minimalkan Kesalahan</h6>
+            <p class="mb-0 text-secondary">Mengurangi risiko kesalahan manual dalam perhitungan kebutuhan gizi.</p>
+          </div>
+          <div class="step">
+            <h6 class="mb-1"><span class="badge text-bg-primary me-1">3</span> Konsisten & Evidence‑Based</h6>
+            <p class="mb-0 text-secondary">Mendukung layanan gizi yang lebih efisien, konsisten, dan berbasis data ilmiah.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / RAG EXPLAINER -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Tentang PediaExpert</h2>
+        <p class="text-secondary">Ditenagai <strong>Retrieval‑Augmented Generation (RAG)</strong> untuk jawaban akurat berbasis referensi.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="feature-card h-100">
+            <h5 class="fw-bold mb-2"><i class="bi bi-database-gear me-2"></i>Bagaimana RAG bekerja?</h5>
+            <p class="mb-2">RAG mencari (retrieve) pengetahuan dari basis data literatur & panduan gizi terkini, lalu menghasilkan (generate) jawaban yang relevan, lengkap, dan dapat dipertanggungjawabkan.</p>
+            <ul class="mb-0 text-secondary">
+              <li>Pencarian sumber tepercaya (guidelines & jurnal)</li>
+              <li>Ringkas & jelaskan secara kontekstual</li>
+              <li>Berikan rujukan untuk audit klinis</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="feature-card h-100">
+            <h5 class="fw-bold mb-2"><i class="bi bi-shield-lock me-2"></i>Privasi & Keamanan</h5>
+            <p class="mb-2">Data pasien diproses dengan prinsip minimisasi data. Opsi penyimpanan lokal/privat cloud untuk fasilitas layanan kesehatan.</p>
+            <ul class="mb-0 text-secondary">
+              <li>TLS/HTTPS, autentikasi berbasis token</li>
+              <li>Logging audit dan role‑based access</li>
+              <li>Konfigurasi sumber referensi institusi</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- TESTIMONIAL / QUOTE -->
+  <section class="section pt-0">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <div class="bubble">
+            <i class="bi bi-quote display-5 text-primary"></i>
+            <p class="fs-5 mb-0">“Dengan PediaExpert, perhitungan kebutuhan gizi menjadi jauh lebih cepat dan konsisten. Integrasi referensi membuat diskusi klinis lebih mudah karena semua rujukan sudah tersedia.”</p>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="d-flex align-items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop" class="rounded-circle" width="72" height="72" alt="Foto ahli gizi" />
+            <div>
+              <div class="fw-bold">Dr. Ayesha Rahman, RD</div>
+              <div class="text-secondary small">Clinical Dietitian – Pediatric Nutrition</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- TEAM -->
+  <section id="team" class="section pt-0">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Tim Pengembang</h2>
+        <p class="text-secondary">Tim interdisipliner dari AI Center Universitas Brawijaya & Universitas Ma Chung.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card team-card h-100 p-3 text-center">
+            <img src="assets/images/tirana.png" class="rounded-4 mb-3" alt="Tirana Noor Fatyanosa" />
+            <h6 class="fw-bold mb-1">Tirana Noor Fatyanosa</h6>
+            <div class="text-secondary small mb-2">AI Engineer — Universitas Brawijaya</div>
+            <div class="d-flex gap-2 justify-content-center">
+              <a class="text-decoration-none" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a class="text-decoration-none" href="#" aria-label="Email"><i class="bi bi-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card team-card h-100 p-3 text-center">
+            <img src="assets/images/mahendra-data.jpg" class="rounded-4 mb-3" alt="Mahendra Data" />
+            <h6 class="fw-bold mb-1">Mahendra Data</h6>
+            <div class="text-secondary small mb-2">Cloud Architect — Universitas Brawijaya</div>
+            <div class="d-flex gap-2 justify-content-center">
+              <a class="text-decoration-none" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a class="text-decoration-none" href="#" aria-label="Email"><i class="bi bi-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+		<div class="col-md-6 col-lg-3">
+          <div class="card team-card h-100 p-3 text-center">
+            <img src="assets/images/ummu-erliana.jpeg" class="rounded-4 mb-3" alt="Ummu Ditya Erliana" />
+            <h6 class="fw-bold mb-1">Ummu Ditya Erliana</h6>
+            <div class="text-secondary small mb-2">Nutrition Domain Expert — Universitas Brawijaya</div>
+            <div class="d-flex gap-2 justify-content-center">
+              <a class="text-decoration-none" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a class="text-decoration-none" href="#" aria-label="Email"><i class="bi bi-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card team-card h-100 p-3 text-center">
+            <img src="assets/images/muhammad-nurwegiono.jpg" class="rounded-4 mb-3" alt="Muhammad Nurwegiono" />
+            <h6 class="fw-bold mb-1">Muhammad Nurwegiono</h6>
+            <div class="text-secondary small mb-2">UI/QA Engineer — Universitas Ma Chung</div>
+            <div class="d-flex gap-2 justify-content-center">
+              <a class="text-decoration-none" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a class="text-decoration-none" href="#" aria-label="Email"><i class="bi bi-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="text-center mb-4 reveal"><h2 class="fw-bold">Pertanyaan yang Sering Diajukan</h2></div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10 reveal">
+          <div class="accordion" id="faqAcc">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q1"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">Apakah PediaExpert gratis?</button></h2>
+              <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc"><div class="accordion-body">Tersedia uji coba gratis 14 hari. Setelah itu Anda dapat memilih paket Professional atau Enterprise.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q2"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">Bagaimana keamanan data pasien?</button></h2>
+              <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Kami menerapkan TLS/HTTPS, autentikasi token, audit log, dan opsi hosting privat/on‑prem sesuai kebijakan institusi.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q3"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">Apakah referensi ilmiah ditampilkan?</button></h2>
+              <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Ya, jawaban dihasilkan dengan RAG dari literatur dan guideline tepercaya. Rujukan bisa ditampilkan otomatis.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q4"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4">Bisakah diintegrasikan dengan EMR?</button></h2>
+              <div id="a4" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Paket Enterprise mendukung integrasi SSO & EMR, dan basis referensi khusus institusi.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER / CTA -->
+  <section id="get-started" class="section pt-0">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7">
+          <h2 class="fw-bold">Siap mencoba PediaExpert?</h2>
+          <p class="text-secondary mb-0">Daftarkan email Anda untuk menerima akses beta, berita, dan pembaruan fitur.</p>
+        </div>
+        <div class="col-lg-5">
+          <form class="d-flex gap-2">
+            <input type="email" class="form-control form-control-lg" placeholder="Email Anda" required>
+            <button class="btn btn-pe btn-lg" type="submit">Daftar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+ 
+
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact" class="section pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h5 class="fw-bold">Kontak & Informasi</h5>
+          <ul class="list-unstyled mt-3 d-grid gap-2">
+            <li><i class="bi bi-globe2 me-2 text-primary"></i> <a class="text-decoration-none" href="#">www.pediaexpert.id</a></li>
+            <li><i class="bi bi-envelope me-2 text-primary"></i> <a class="text-decoration-none" href="mailto:fatyanosa@ub.ac.id">fatyanosa@ub.ac.id</a></li>
+            <li><i class="bi bi-building me-2 text-primary"></i> AI Center, Universitas Brawijaya</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h5 class="fw-bold">Dukungan & Sumber Daya</h5>
+          <ul class="list-unstyled mt-3 d-grid gap-2 text-secondary">
+            <li><i class="bi bi-check2 me-2 text-primary"></i>Dokumentasi cepat mulai</li>
+            <li><i class="bi bi-check2 me-2 text-primary"></i>Kebijakan privasi & keamanan</li>
+            <li><i class="bi bi-check2 me-2 text-primary"></i>Pusat bantuan & pelatihan</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4" />
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+        <div class="small">© <span id="year"></span> PediaExpert. All rights reserved.</div>
+        
+      </div>
+    </div>
+  </footer>
+  
+<a id="backToTop" href="#home" title="Kembali ke atas">
+  <i class="bi bi-arrow-up"></i>
+</a>
+
+
+  
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Prevent dummy newsletter submit
+    document.querySelector('form').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Terima kasih! Kami akan menghubungi Anda untuk akses beta.');
+    });
+  </script>
+</body>
+</html>
