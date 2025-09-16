@@ -96,6 +96,98 @@
       .hero{padding-top:6rem; padding-bottom:3rem}
       .display-5{font-size:2rem}
     }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background: #181c22 !important;
+      color: #f1f3f7 !important;
+    }
+    body.dark-mode .navbar,
+    body.dark-mode .section,
+    body.dark-mode .feature-card,
+    body.dark-mode .team-card,
+    body.dark-mode .bubble,
+    body.dark-mode .price-card,
+    body.dark-mode footer {
+      background: #23272f !important;
+      color: #f1f3f7 !important;
+      box-shadow: none !important;
+    }
+    body.dark-mode .feature-card,
+    body.dark-mode .team-card,
+    body.dark-mode .bubble,
+    body.dark-mode .price-card {
+      border-color: #333 !important;
+    }
+    body.dark-mode .btn-pe {
+      background: #244b7b !important;
+      color: #fff !important;
+    }
+    body.dark-mode .btn-pe:hover {
+      background: #1677ff !important;
+      color: #fff !important;
+    }
+    body.dark-mode .form-control,
+    body.dark-mode .accordion-button,
+    body.dark-mode .accordion-body {
+      background: #23272f !important;
+      color: #f1f3f7 !important;
+      border-color: #333 !important;
+    }
+    body.dark-mode .accordion-button:not(.collapsed) {
+      background: #181c22 !important;
+    }
+    body.dark-mode .modal-content {
+      background: #23272f !important;
+    }
+    body.dark-mode .gallery-img {
+      box-shadow: 0 2px 12px rgba(22,119,255,.08);
+    }
+    body.dark-mode .bg-white {
+      background: #23272f !important;
+    }
+    body.dark-mode .text-secondary {
+      color: #b0b8c1 !important;
+    }
+    body.dark-mode .bg-dark {
+      background: #181c22 !important;
+    }
+
+    /* Live Chat Konsultasi WhatsApp */
+    .livechat-wa {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 1050;
+      background: #25d366;
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 20px;
+      border-radius: 30px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .livechat-wa:hover {
+      background: #128c7e;
+      color: #fff;
+      text-decoration: none;
+    }
+    .livechat-wa i {
+      font-size: 1.5rem;
+    }
+    @media (max-width: 575.98px) {
+      .livechat-wa {
+        padding: 10px 14px;
+        font-size: 1rem;
+        right: 12px;
+        bottom: 12px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -116,11 +208,17 @@
           <li class="nav-item"><a class="nav-link" href="#benefits">Manfaat</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
           <li class="nav-item"><a class="nav-link" href="#team">Tim</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Galeri Foto</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
         </ul>
         <div class="ms-lg-3 mt-3 mt-lg-0 d-flex gap-2">
-          <a href="#demo" class="btn btn-outline-primary">Demo</a>
+          <a href="https://chat.pediaexpert.id/" class="btn btn-outline-primary">Demo</a>
           <a href="#get-started" class="btn btn-pe">Coba Sekarang</a>
+        </div>
+        <!-- Tambahkan tombol dark mode di dalam navbar, misal sebelum </div> pada .container navbar -->
+        <div class="form-check form-switch ms-3">
+          <input class="form-check-input" type="checkbox" id="darkModeSwitch" aria-label="Toggle dark mode">
+          <label class="form-check-label" for="darkModeSwitch"><i class="bi bi-moon"></i></label>
         </div>
       </div>
     </div>
@@ -135,7 +233,7 @@
           <h1 class="display-5 mb-3">PediaExpert – Chatbot Cerdas untuk Ahli Gizi Berbasis <span class="text-primary">RAG</span></h1>
           <p class="lead mb-4">Bantu pengambilan keputusan terapi gizi pasien anak secara <strong>cepat</strong>, <strong>akurat</strong>, dan <strong>berbasis bukti ilmiah</strong> menggunakan teknologi Retrieval‑Augmented Generation.</p>
           <div class="d-flex gap-2">
-            <a href="#get-started" class="btn btn-pe btn-lg"><i class="bi bi-rocket-takeoff me-2"></i>Mulai Gunakan</a>
+            <a href="https://chat.pediaexpert.id/" class="btn btn-pe btn-lg"><i class="bi bi-rocket-takeoff me-2"></i>Mulai Gunakan</a>
             <a href="#features" class="btn btn-outline-primary btn-lg"><i class="bi bi-info-circle me-2"></i>Pelajari Lebih Lanjut</a>
           </div>
           <div class="d-flex align-items-center gap-3 mt-4 small text-secondary">
@@ -264,15 +362,15 @@
         <div class="col-lg-7">
           <div class="bubble">
             <i class="bi bi-quote display-5 text-primary"></i>
-            <p class="fs-5 mb-0">“Dengan PediaExpert, perhitungan kebutuhan gizi menjadi jauh lebih cepat dan konsisten. Integrasi referensi membuat diskusi klinis lebih mudah karena semua rujukan sudah tersedia.”</p>
+            <p class="fs-5 mb-0">“Saya mengapresiasi hadirnya PediaExpert.id sebagai inovasi anak bangsa yang mampu mempercepat terapi gizi anak berbasis evidence. Inovasi ini sangat relevan dalam mendukung upaya nasional menurunkan stunting dan meningkatkan kualitas layanan kesehatan anak. Saya merekomendasikan agar PediaExpert.id dapat diimplementasikan lebih luas di rumah sakit maupun fasilitas kesehatan sebagai bagian dari transformasi layanan kesehatan Indonesia.”</p>
           </div>
         </div>
         <div class="col-lg-5">
           <div class="d-flex align-items-center gap-3">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop" class="rounded-circle" width="72" height="72" alt="Foto ahli gizi" />
+            <img src="assets/images/achmad-adhitya.jpg" class="rounded-circle" width="200" height="200" alt="Achmad Adhitya" />
             <div>
-              <div class="fw-bold">Dr. Ayesha Rahman, RD</div>
-              <div class="text-secondary small">Clinical Dietitian – Pediatric Nutrition</div>
+              <div class="fw-bold">Achmad Adhitya, Ph.D.,</div>
+              <div class="text-secondary small">Staf Khusus Wakil Presiden Bidang Pendidikan, Riset, Inovasi dan Hilirisasi</div>
             </div>
           </div>
         </div>
@@ -385,7 +483,48 @@
     </div>
   </section>
   
- 
+  <!-- GALLERY PHOTO -->
+  <section id="gallery" class="section pt-0">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Galeri Foto</h2>
+        <p class="text-secondary">Dokumentasi kegiatan demo dan pengujian aplikasi PediaExpert dengan RSUD Dr. Saiful Anwar, Malang </p>
+      </div>
+      <div class="row g-3">
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="assets/images/gallery1.jpeg" class="img-fluid rounded-3 gallery-img" alt="Galeri 1" data-caption="Demo aplikasi bersama ahli gizi" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="assets/images/gallery2.jpeg" class="img-fluid rounded-3 gallery-img" alt="Galeri 2" data-caption="Demo aplikasi bersama ahli gizi" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="assets/images/gallery3.jpeg" class="img-fluid rounded-3 gallery-img" alt="Galeri 3" data-caption="Demo aplikasi bersama ahli gizi" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="assets/images/gallery4.jpeg" class="img-fluid rounded-3 gallery-img" alt="Galeri 4" data-caption="Demo aplikasi bersama ahli gizi" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+        </div>
+        <!-- Tambahkan gambar lain sesuai kebutuhan -->
+      </div>
+    </div>
+
+    <!-- Modal Preview -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-transparent border-0 position-relative">
+          <button type="button" class="btn btn-light position-absolute top-50 start-0 translate-middle-y ms-2" id="galleryPrev" style="z-index:2;">
+            <i class="bi bi-chevron-left fs-3"></i>
+          </button>
+          <div class="text-center">
+            <img id="galleryModalImg" src="" class="img-fluid rounded-4 shadow d-block mx-auto" alt="Preview" />
+            <div id="galleryModalCaption" class="mt-3 text-white bg-dark bg-opacity-75 px-3 py-2 rounded-3 d-inline-block small"></div>
+          </div>
+          <button type="button" class="btn btn-light position-absolute top-50 end-0 translate-middle-y me-2" id="galleryNext" style="z-index:2;">
+            <i class="bi bi-chevron-right fs-3"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- CONTACT / FOOTER -->
   <footer id="contact" class="section pb-4">
@@ -433,6 +572,103 @@
       e.preventDefault();
       alert('Terima kasih! Kami akan menghubungi Anda untuk akses beta.');
     });
+
+    // Gallery modal with navigation & caption
+    const galleryImgs = Array.from(document.querySelectorAll('.gallery-img'));
+    const modalImg = document.getElementById('galleryModalImg');
+    const modalCaption = document.getElementById('galleryModalCaption');
+    let currentIdx = 0;
+
+    function showGalleryImg(idx) {
+      if (idx < 0) idx = galleryImgs.length - 1;
+      if (idx >= galleryImgs.length) idx = 0;
+      currentIdx = idx;
+      modalImg.src = galleryImgs[idx].src;
+      modalImg.alt = galleryImgs[idx].alt;
+      modalCaption.textContent = galleryImgs[idx].getAttribute('data-caption') || '';
+    }
+
+    galleryImgs.forEach(function(img, idx){
+      img.addEventListener('click', function(){
+        showGalleryImg(idx);
+      });
+    });
+
+    document.getElementById('galleryPrev').addEventListener('click', function(e){
+      e.stopPropagation();
+      showGalleryImg(currentIdx - 1);
+    });
+
+    document.getElementById('galleryNext').addEventListener('click', function(e){
+      e.stopPropagation();
+      showGalleryImg(currentIdx + 1);
+    });
+
+    document.getElementById('galleryModal').addEventListener('hidden.bs.modal', function () {
+      modalImg.src = '';
+      modalCaption.textContent = '';
+      currentIdx = 0;
+    });
+
+    // Dark mode toggle
+    const darkSwitch = document.getElementById('darkModeSwitch');
+    // Cek preferensi awal
+    if (localStorage.getItem('pe-dark') === '1' || (window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('pe-dark'))) {
+      document.body.classList.add('dark-mode');
+      darkSwitch.checked = true;
+    }
+    darkSwitch.addEventListener('change', function() {
+      if (this.checked) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('pe-dark', '1');
+      } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('pe-dark', '0');
+      }
+    });
   </script>
+
+  <!-- Live Chat Konsultasi WhatsApp -->
+<a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20konsultasi%20gizi%20anak%20di%20PediaExpert" 
+   class="livechat-wa" target="_blank" title="Konsultasi via WhatsApp">
+  <i class="bi bi-whatsapp"></i> Konsultasi Gizi
+</a>
+
+<style>
+.livechat-wa {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1050;
+  background: #25d366;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background .2s;
+}
+.livechat-wa:hover {
+  background: #128c7e;
+  color: #fff;
+  text-decoration: none;
+}
+.livechat-wa i {
+  font-size: 1.5rem;
+}
+@media (max-width: 575.98px) {
+  .livechat-wa {
+    padding: 10px 14px;
+    font-size: 1rem;
+    right: 12px;
+    bottom: 12px;
+  }
+}
+</style>
 </body>
 </html>
