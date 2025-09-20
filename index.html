@@ -195,36 +195,49 @@
 <body>
   <!-- NAV -->
   <nav class="navbar navbar-expand-lg bg-white sticky-top py-3">
-    <div class="container">
+  <div class="container">
+
+    <a class="navbar-brand p-0 m-0 d-inline-flex align-items-center" href="#home">
+      <img src="assets/images/logopedia-expert.png" alt="PediaExpert Logo" height="80" style="width:auto;display:block">
+    </a>
       
-	  <a class="navbar-brand p-0 m-0 d-inline-flex align-items-center" href="#home">
-  <img src="assets/images/logopedia-expert.png" alt="PediaExpert Logo" height="80" style="width:auto;display:block">
-</a>
-	  
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#features">Fitur</a></li>
-          <li class="nav-item"><a class="nav-link" href="#benefits">Manfaat</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
-          <li class="nav-item"><a class="nav-link" href="#team">Tim</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">Galeri Foto</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
-        </ul>
-        <div class="ms-lg-3 mt-3 mt-lg-0 d-flex gap-2">
-          <a href="https://chat.pediaexpert.id/" class="btn btn-outline-primary">Demo</a>
-          <a href="#get-started" class="btn btn-pe">Coba Sekarang</a>
-        </div>
-        <!-- Tambahkan tombol dark mode di dalam navbar, misal sebelum </div> pada .container navbar -->
-        <div class="form-check form-switch ms-3">
-          <input class="form-check-input" type="checkbox" id="darkModeSwitch" aria-label="Toggle dark mode">
-          <label class="form-check-label" for="darkModeSwitch"><i class="bi bi-moon"></i></label>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#features">Fitur</a></li>
+        <li class="nav-item"><a class="nav-link" href="#benefits">Manfaat</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="#team">Tim</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Galeri Foto</a></li>
+        <li class="nav-item"><a class="nav-link" href="#press-release">Press Release</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+      </ul>
+      <div class="ms-lg-3 mt-3 mt-lg-0 d-flex gap-2 align-items-center">
+        <a href="https://chat.pediaexpert.id/" class="btn btn-outline-primary">Demo</a>
+        <a href="#get-started" class="btn btn-pe">Coba Sekarang</a>
+        <!-- Sosmed kanan bawah button -->
+        <div class="d-flex flex-column align-items-end ms-3">
+          <span class="small text-secondary mb-1">Follow us:</span>
+          <div class="d-flex gap-2">
+            <a href="https://instagram.com/pediaexpert" target="_blank" class="text-primary fs-4" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://facebook.com/username" target="_blank" class="text-primary fs-4" aria-label="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+          </div>
         </div>
       </div>
+      <!-- Tombol dark mode -->
+      <div class="form-check form-switch ms-3">
+        <input class="form-check-input" type="checkbox" id="darkModeSwitch" aria-label="Toggle dark mode">
+        <label class="form-check-label" for="darkModeSwitch"><i class="bi bi-moon"></i></label>
+      </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- HERO -->
   <header id="home" class="hero">
@@ -360,22 +373,57 @@
   <!-- TESTIMONIAL / QUOTE -->
   <section class="section pt-0">
     <div class="container">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-7">
-          <div class="bubble">
-            <i class="bi bi-quote display-5 text-primary"></i>
-            <p class="fs-5 mb-0">“Saya mengapresiasi hadirnya PediaExpert.id sebagai inovasi anak bangsa yang mampu mempercepat terapi gizi anak berbasis evidence. Inovasi ini sangat relevan dalam mendukung upaya nasional menurunkan stunting dan meningkatkan kualitas layanan kesehatan anak. Saya merekomendasikan agar PediaExpert.id dapat diimplementasikan lebih luas di rumah sakit maupun fasilitas kesehatan sebagai bagian dari transformasi layanan kesehatan Indonesia.”</p>
-          </div>
-        </div>
-        <div class="col-lg-5">
-          <div class="d-flex align-items-center gap-3">
-            <img src="assets/images/achmad-adhitya.jpg" class="rounded-circle" width="200" height="200" alt="Achmad Adhitya" />
-            <div>
-              <div class="fw-bold">Achmad Adhitya, Ph.D.,</div>
-              <div class="text-secondary small">Staf Khusus Wakil Presiden Bidang Pendidikan, Riset, Inovasi dan Hilirisasi</div>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-7">
+                <div class="bubble">
+                  <i class="bi bi-quote display-5 text-primary"></i>
+                  <p class="fs-5 mb-0">“Saya mengapresiasi hadirnya PediaExpert.id sebagai inovasi anak bangsa yang mampu mempercepat terapi gizi anak berbasis evidence. Inovasi ini sangat relevan dalam mendukung upaya nasional menurunkan stunting dan meningkatkan kualitas layanan kesehatan anak. Saya merekomendasikan agar PediaExpert.id dapat diimplementasikan lebih luas di rumah sakit maupun fasilitas kesehatan sebagai bagian dari transformasi layanan kesehatan Indonesia.”</p>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="d-flex align-items-center gap-3">
+                  <img src="assets/images/achmad-adhitya.jpg" class="rounded-circle" width="200" height="200" alt="Achmad Adhitya" />
+                  <div>
+                    <div class="fw-bold">Achmad Adhitya, Ph.D.</div>
+                    <div class="text-secondary small">Staf Khusus Wakil Presiden Bidang Pendidikan, Riset, Inovasi dan Hilirisasi</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <!-- Testimonial tambahan dari Wakil Menteri Komdigi -->
+          <div class="carousel-item">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-7">
+                <div class="bubble">
+                  <i class="bi bi-quote display-5 text-primary"></i>
+                  <p class="fs-5 mb-0">“Pencegahan stunting memerlukan dukungan data dan analisis yang akurat. PediaExpert.id hadir sebagai inovasi berbasis kecerdasan buatan (AI) yang dirancang khusus untuk mendukung ahli gizi dan tenaga medis dalam pengambilan keputusan klinis. Dengan teknologi ini, para profesional kesehatan dapat menyusun intervensi gizi yang lebih tepat sasaran dan berbasis bukti. Inovasi seperti PediaExpert.id memperlihatkan bagaimana teknologi digital dapat memperkuat peran tenaga medis dalam upaya bersama mencegah stunting dan membangun generasi Indonesia emas 2045.”</p>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="d-flex align-items-center gap-3">
+                  <img src="assets/images/nezar-patria.jpg" class="rounded-circle" width="200" height="200" alt="Wakil Menteri Komdigi" />
+                  <div>
+                    <div class="fw-bold">Nezar Patria, S.Fil., M.Sc., M.B.A.,</div>
+                    <div class="text-secondary small">Wakil Menteri Komunikasi dan Digital Indonesia (KOMDIGI)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Akhir testimonial tambahan -->
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-primary rounded-circle" aria-hidden="true"></span>
+          <span class="visually-hidden">Sebelumnya</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-primary rounded-circle" aria-hidden="true"></span>
+          <span class="visually-hidden">Berikutnya</span>
+        </button>
       </div>
     </div>
   </section>
@@ -440,32 +488,66 @@
   
   <!-- FAQ -->
   <section id="faq" class="section">
-    <div class="container">
-      <div class="text-center mb-4 reveal"><h2 class="fw-bold">Pertanyaan yang Sering Diajukan</h2></div>
-      <div class="row justify-content-center">
-        <div class="col-lg-10 reveal">
-          <div class="accordion" id="faqAcc">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="q1"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">Apakah PediaExpert gratis?</button></h2>
-              <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc"><div class="accordion-body">Tersedia uji coba gratis 14 hari. Setelah itu Anda dapat memilih paket Professional atau Enterprise.</div></div>
+  <div class="container">
+    <div class="text-center mb-4 reveal">
+      <h2 class="fw-bold">Pertanyaan yang Sering Diajukan</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10 reveal">
+        <div class="accordion" id="faqAcc">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
+                Apakah tersedia uji coba gratis?
+              </button>
+            </h2>
+            <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                Tersedia uji coba gratis 14 hari. Setelah itu Anda dapat memilih paket Professional atau Enterprise.
+              </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="q2"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">Bagaimana keamanan data pasien?</button></h2>
-              <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Kami menerapkan TLS/HTTPS, autentikasi token, audit log, dan opsi hosting privat/on‑prem sesuai kebijakan institusi.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+                Bagaimana keamanan data pasien?
+              </button>
+            </h2>
+            <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                Kami menerapkan TLS/HTTPS, autentikasi token, audit log, dan opsi hosting privat/on‑prem sesuai kebijakan institusi.
+              </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="q3"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">Apakah referensi ilmiah ditampilkan?</button></h2>
-              <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Ya, jawaban dihasilkan dengan RAG dari literatur dan guideline tepercaya. Rujukan bisa ditampilkan otomatis.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+                Apakah referensi ilmiah ditampilkan?
+              </button>
+            </h2>
+            <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                Ya, jawaban dihasilkan dengan RAG dari literatur dan guideline tepercaya. Rujukan bisa ditampilkan otomatis.
+              </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="q4"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4">Bisakah diintegrasikan dengan EMR?</button></h2>
-              <div id="a4" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Paket Enterprise mendukung integrasi SSO & EMR, dan basis referensi khusus institusi.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a4">
+                Bisakah diintegrasikan dengan EMR?
+              </button>
+            </h2>
+            <div id="a4" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                Paket Enterprise mendukung integrasi SSO & EMR, dan basis referensi khusus institusi.
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- NEWSLETTER / CTA -->
   <section id="get-started" class="section pt-0">
@@ -485,81 +567,123 @@
     </div>
   </section>
   
-  <!-- GALLERY PHOTO -->
-  <section id="gallery" class="section pt-0">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">Galeri Foto</h2>
-        <p class="text-secondary">Dokumentasi kegiatan demo dan pengujian aplikasi PediaExpert dengan RSUD Dr. Saiful Anwar, Malang </p>
-      </div>
-      <div class="row g-3">
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="assets/images/gallery1.jpeg" class="img-fluid rounded-3 gallery-img" alt="Galeri 1" data-caption="Demo aplikasi bersama ahli gizi" data-bs-toggle="modal" data-bs-target="#galleryModal" />
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="assets/images/gallery2.jpeg" class="img-fluid rounded-3 gallery-img" alt="Galeri 2" data-caption="Demo aplikasi bersama ahli gizi" data-bs-toggle="modal" data-bs-target="#galleryModal" />
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="assets/images/gallery3.jpeg" class="img-fluid rounded-3 gallery-img" alt="Galeri 3" data-caption="Demo aplikasi bersama ahli gizi" data-bs-toggle="modal" data-bs-target="#galleryModal" />
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="assets/images/gallery4.jpeg" class="img-fluid rounded-3 gallery-img" alt="Galeri 4" data-caption="Demo aplikasi bersama ahli gizi" data-bs-toggle="modal" data-bs-target="#galleryModal" />
-        </div>
-        <!-- Tambahkan gambar lain sesuai kebutuhan -->
-      </div>
+  <!-- GALLERY PHOTO DENGAN KATEGORI -->
+<section id="gallery" class="section pt-0">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Galeri Foto</h2>
+      <p class="text-secondary">Dokumentasi kegiatan demo, presentasi, dan kolaborasi PediaExpert.</p>
     </div>
+    <!-- Filter kategori -->
+    <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+      <button class="btn btn-outline-primary btn-sm active" data-filter="all" type="button">Semua</button>
+      <button class="btn btn-outline-primary btn-sm" data-filter="wapres" type="button">Presentasi dengan Staf Khusus Wapres</button>
+      <button class="btn btn-outline-primary btn-sm" data-filter="komdigi" type="button">Presentasi dengan Wamen Komdigi</button>
+      <button class="btn btn-outline-primary btn-sm" data-filter="lainnya" type="button">Demo dan Pengujian Aplikasi di RSUD Dr. Saiful Anwar</button>
+    </div>
+    <div class="row g-3" id="galleryGrid">
+      <!-- Kategori Wapres: lebih dari 5 foto -->
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="wapres">
+        <img src="assets/images/staff-khusus-wapres-achmad-adhitya.jpeg" class="img-fluid rounded-3 gallery-img" alt="Wapres 1" data-caption="Presentasi dengan Staf Khusus Wapres, Achmad Adhitya, Ph.D., #1" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="wapres">
+        <img src="assets/images/staff-khusus-wapres-achmad-adhitya-2.jpeg" class="img-fluid rounded-3 gallery-img" alt="Wapres 2" data-caption="Presentasi dengan Staf Khusus Wapres, Achmad Adhitya, Ph.D., #2" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="wapres">
+        <img src="assets/images/staff-khusus-wapres-achmad-adhitya-3.jpeg" class="img-fluid rounded-3 gallery-img" alt="Wapres 3" data-caption="Presentasi dengan Staf Khusus Wapres, Achmad Adhitya, Ph.D., #3" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="wapres">
+        <img src="assets/images/staff-khusus-wapres-achmad-adhitya-4.jpeg" class="img-fluid rounded-3 gallery-img" alt="Wapres 4" data-caption="Presentasi dengan Staf Khusus Wapres, Achmad Adhitya, Ph.D., #4" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <!--
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="wapres">
+        <img src="assets/images/wapres-5.jpg" class="img-fluid rounded-3 gallery-img" alt="Wapres 5" data-caption="Presentasi dengan Staf Khusus Wapres #5" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="wapres">
+        <img src="assets/images/wapres-6.jpg" class="img-fluid rounded-3 gallery-img" alt="Wapres 6" data-caption="Presentasi dengan Staf Khusus Wapres #6" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>-->
+      <!-- Kategori Komdigi: lebih dari 5 foto -->
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="komdigi">
+        <img src="assets/images/wamen-komdigi-nezar-patria.jpeg" class="img-fluid rounded-3 gallery-img" alt="Komdigi 1" data-caption="Presentasi dengan Wamen Komdigi, Nezar Patria, S.Fil., M.Sc., M.B.A., #1" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="komdigi">
+        <img src="assets/images/wamen-komdigi-nezar-patria-2.jpg" class="img-fluid rounded-3 gallery-img" alt="Komdigi 2" data-caption="Presentasi dengan Wamen Komdigi, Nezar Patria, S.Fil., M.Sc., M.B.A., #2" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="komdigi">
+        <img src="assets/images/wamen-komdigi-nezar-patria-3.jpg" class="img-fluid rounded-3 gallery-img" alt="Komdigi 3" data-caption="Presentasi dengan Wamen Komdigi, Nezar Patria, S.Fil., M.Sc., M.B.A., #3" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="komdigi">
+        <img src="assets/images/wamen-komdigi-nezar-patria-4.jpg" class="img-fluid rounded-3 gallery-img" alt="Komdigi 4" data-caption="Presentasi dengan Wamen Komdigi, Nezar Patria, S.Fil., M.Sc., M.B.A., #4" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="komdigi">
+        <img src="assets/images/wamen-komdigi-nezar-patria-5.jpg" class="img-fluid rounded-3 gallery-img" alt="Komdigi 5" data-caption="Presentasi dengan Wamen Komdigi, Nezar Patria, S.Fil., M.Sc., M.B.A., #5" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
 
-    <!-- Modal Preview -->
-    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content bg-transparent border-0 position-relative">
-          <button type="button" class="btn btn-light position-absolute top-50 start-0 translate-middle-y ms-2" id="galleryPrev" style="z-index:2;">
-            <i class="bi bi-chevron-left fs-3"></i>
-          </button>
-          <div class="text-center">
-            <img id="galleryModalImg" src="" class="img-fluid rounded-4 shadow d-block mx-auto" alt="Preview" />
-            <div id="galleryModalCaption" class="mt-3 text-white bg-dark bg-opacity-75 px-3 py-2 rounded-3 d-inline-block small"></div>
-          </div>
-          <button type="button" class="btn btn-light position-absolute top-50 end-0 translate-middle-y me-2" id="galleryNext" style="z-index:2;">
-            <i class="bi bi-chevron-right fs-3"></i>
-          </button>
-        </div>
+      <!-- Kategori Lainnya: lebih dari 5 foto -->
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="lainnya">
+        <img src="assets/images/demo-pediaexpert-rssa.jpeg" class="img-fluid rounded-3 gallery-img" alt="Demo RS 1" data-caption="Demo dan pengujian aplikasi di RS #1" data-bs-toggle="modal" data-bs-target="#galleryModal" />
       </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="lainnya">
+        <img src="assets/images/demo-pediaexpert-rssa2.jpeg" class="img-fluid rounded-3 gallery-img" alt="Demo RS 2" data-caption="Demo dan pengujian aplikasi di RS #2" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="lainnya">
+        <img src="assets/images/demo-pediaexpert-rssa3.jpeg" class="img-fluid rounded-3 gallery-img" alt="Demo RS 3" data-caption="Demo dan pengujian aplikasi di RS #3" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="lainnya">
+        <img src="assets/images/demo-pediaexpert-rssa4.jpeg" class="img-fluid rounded-3 gallery-img" alt="Demo RS 4" data-caption="Demo dan pengujian aplikasi di RS #4" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="lainnya">
+        <img src="assets/images/demo-pediaexpert-rssa5.jpeg" class="img-fluid rounded-3 gallery-img" alt="Demo RS 5" data-caption="Demo dan pengujian aplikasi di RS #5" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <!--<div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="lainnya">
+        <img src="assets/images/lainnya-6.jpg" class="img-fluid rounded-3 gallery-img" alt="Demo RS 6" data-caption="Demo aplikasi di RS #6" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>-->
+      <!-- Tambahkan foto lain sesuai kebutuhan, pastikan data-category sesuai -->
     </div>
-  </section>
+  </div>
 
-  <!-- CONTACT / FOOTER -->
-  <footer id="contact" class="section pb-4">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-6">
-          <h5 class="fw-bold">Kontak & Informasi</h5>
-          <ul class="list-unstyled mt-3 d-grid gap-2">
-            <li><i class="bi bi-globe2 me-2 text-primary"></i> <a class="text-decoration-none" href="#">www.pediaexpert.id</a></li>
-            <li><i class="bi bi-envelope me-2 text-primary"></i> <a class="text-decoration-none" href="mailto:fatyanosa@ub.ac.id">fatyanosa@ub.ac.id</a></li>
-            <li><i class="bi bi-building me-2 text-primary"></i> AI Center, Universitas Brawijaya</li>
-          </ul>
+  <!-- Modal Preview -->
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0 position-relative">
+        <button type="button" class="btn btn-light position-absolute top-50 start-0 translate-middle-y ms-2" id="galleryPrev" style="z-index:2;">
+          <i class="bi bi-chevron-left fs-3"></i>
+        </button>
+        <div class="text-center">
+          <img id="galleryModalImg" src="" class="img-fluid rounded-4 shadow d-block mx-auto" alt="Preview" />
+          <div id="galleryModalCaption" class="mt-3 text-white bg-dark bg-opacity-75 px-3 py-2 rounded-3 d-inline-block small"></div>
         </div>
-        <div class="col-md-6">
-          <h5 class="fw-bold">Dukungan & Sumber Daya</h5>
-          <ul class="list-unstyled mt-3 d-grid gap-2 text-secondary">
-            <li><i class="bi bi-check2 me-2 text-primary"></i>Dokumentasi cepat mulai</li>
-            <li><i class="bi bi-check2 me-2 text-primary"></i>Kebijakan privasi & keamanan</li>
-            <li><i class="bi bi-check2 me-2 text-primary"></i>Pusat bantuan & pelatihan</li>
-          </ul>
-        </div>
-      </div>
-      <hr class="my-4" />
-      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
-        <div class="small">© <span id="year"></span> PediaExpert. All rights reserved.</div>
-        
+        <button type="button" class="btn btn-light position-absolute top-50 end-0 translate-middle-y me-2" id="galleryNext" style="z-index:2;">
+          <i class="bi bi-chevron-right fs-3"></i>
+        </button>
       </div>
     </div>
-  </footer>
-  
-<a id="backToTop" href="#home" title="Kembali ke atas">
-  <i class="bi bi-arrow-up"></i>
-</a>
+  </div>
+</section>
+
+  <!-- INTEGRASI KALENDER EVENT -->
+<section id="events" class="section pt-0">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Kalender Event</h2>
+      <p class="text-secondary">Jadwal webinar, pelatihan, dan event terbaru PediaExpert.</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <!-- Contoh Google Calendar Embed -->
+        <div class="ratio ratio-16x9 rounded-4 shadow">
+          <iframe src="https://calendar.google.com/calendar/embed?src=your_calendar_id%40group.calendar.google.com&ctz=Asia%2FJakarta"
+            style="border:0" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div class="text-end mt-2">
+          <a href="https://calendar.google.com/calendar/u/0/r?cid=your_calendar_id@group.calendar.google.com" target="_blank" class="btn btn-outline-primary btn-sm">
+            Lihat di Google Calendar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
   
@@ -573,6 +697,22 @@
     document.querySelector('form').addEventListener('submit', function(e){
       e.preventDefault();
       alert('Terima kasih! Kami akan menghubungi Anda untuk akses beta.');
+    });
+
+    // Gallery kategori filter
+    document.querySelectorAll('[data-filter]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.getAttribute('data-filter');
+        document.querySelectorAll('.gallery-item').forEach(function(item) {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
     });
 
     // Gallery modal with navigation & caption
@@ -631,9 +771,9 @@
   </script>
 
   <!-- Live Chat Konsultasi WhatsApp -->
-<a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20konsultasi%20gizi%20anak%20di%20PediaExpert" 
+<a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20konsultasi%20aplikasi%20gizi%20di%20PediaExpert" 
    class="livechat-wa" target="_blank" title="Konsultasi via WhatsApp">
-  <i class="bi bi-whatsapp"></i> Konsultasi Gizi
+  <i class="bi bi-whatsapp"></i> Konsultasi Aplikasi
 </a>
 
 <style>
@@ -672,5 +812,840 @@
   }
 }
 </style>
+
+
+<!-- 
+<section id="press-release" class="section pt-0">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Press Release Kegiatan</h2>
+      <p class="text-secondary">Berita dan publikasi resmi dari setiap kegiatan PediaExpert.</p>
+    </div>
+    <div class="row g-4">
+    
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/images/staff-khusus-wapres-achmad-adhitya.jpeg" class="card-img-top" alt="Press Release 1">
+          <div class="card-body">
+            <h5 class="card-title">Presentasi dengan Staf Khusus Wapres</h5>
+            <p class="card-text small text-secondary">Malang, 12 September 2025</p>
+            <p class="card-text">PediaExpert memaparkan inovasi chatbot gizi anak di hadapan Staf Khusus Wakil Presiden RI, Achmad Adhitya, Ph.D., untuk mendukung percepatan penurunan stunting nasional.</p>
+            <a href="press-release-1.html" class="btn btn-outline-primary btn-sm" target="_blank">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/images/wamen-komdigi-nezar-patria.jpeg" class="card-img-top" alt="Press Release 2">
+          <div class="card-body">
+            <h5 class="card-title">Presentasi dengan Wamen Komdigi</h5>
+            <p class="card-text small text-secondary">Malang, 29 September 2025</p>
+            <p class="card-text">PediaExpert presentasi ke Wakil Menteri Komunikasi dan Digital, Nezar Patria, S.Fil., M.Sc., M.B.A., dalam rangka penguatan transformasi digital terapi kesehatan gizi anak.</p>
+            <a href="press-release-2.html" class="btn btn-outline-primary btn-sm" target="_blank">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/images/demo-pediaexpert-rssa.jpeg" class="card-img-top" alt="Press Release 3">
+          <div class="card-body">
+            <h5 class="card-title">Demo & Uji Coba di RSUD Dr. Saiful Anwar</h5>
+            <p class="card-text small text-secondary">Malang, 3 September 2025</p>
+            <p class="card-text">Tim PediaExpert melakukan demo dan uji coba aplikasi bersama tim gizi RSUD Dr. Saiful Anwar untuk meningkatkan efisiensi layanan gizi anak.</p>
+            <a href="press-release-3.html" class="btn btn-outline-primary btn-sm" target="_blank">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</section>
+-->
+
+  <!-- 
+  <footer id="contact" class="section pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h5 class="fw-bold">Kontak & Informasi</h5>
+          <ul class="list-unstyled mt-3 d-grid gap-2">
+            <li><i class="bi bi-globe2 me-2 text-primary"></i> <a class="text-decoration-none" href="#">www.pediaexpert.id</a></li>
+            <li><i class="bi bi-envelope me-2 text-primary"></i> <a class="text-decoration-none" href="mailto:fatyanosa@ub.ac.id">fatyanosa@ub.ac.id</a></li>
+            <li><i class="bi bi-building me-2 text-primary"></i> AI Center, Universitas Brawijaya</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h5 class="fw-bold">Dukungan & Sumber Daya</h5>
+          <ul class="list-unstyled mt-3 d-grid gap-2 text-secondary">
+            <li><i class="bi bi-check2 me-2 text-primary"></i>Dokumentasi cepat mulai</li>
+            <li><i class="bi bi-check2 me-2 text-primary"></i>Kebijakan privasi & keamanan</li>
+            <li><i class="bi bi-check2 me-2 text-primary"></i>Pusat bantuan & pelatihan</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4" />
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+        <div class="small">© <span id="year"></span> PediaExpert. All rights reserved.</div>
+        
+      </div>
+    </div>
+  </footer>
+-->
+<a id="backToTop" href="#home" title="Kembali ke atas">
+  <i class="bi bi-arrow-up"></i>
+</a>
+
+
+  
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Prevent dummy newsletter submit
+    document.querySelector('form').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Terima kasih! Kami akan menghubungi Anda untuk akses beta.');
+    });
+
+    // Gallery kategori filter
+    document.querySelectorAll('[data-filter]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.getAttribute('data-filter');
+        document.querySelectorAll('.gallery-item').forEach(function(item) {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Gallery modal with navigation & caption
+    const galleryImgs = Array.from(document.querySelectorAll('.gallery-img'));
+    const modalImg = document.getElementById('galleryModalImg');
+    const modalCaption = document.getElementById('galleryModalCaption');
+    let currentIdx = 0;
+
+    function showGalleryImg(idx) {
+      if (idx < 0) idx = galleryImgs.length - 1;
+      if (idx >= galleryImgs.length) idx = 0;
+      currentIdx = idx;
+      modalImg.src = galleryImgs[idx].src;
+      modalImg.alt = galleryImgs[idx].alt;
+      modalCaption.textContent = galleryImgs[idx].getAttribute('data-caption') || '';
+    }
+
+    galleryImgs.forEach(function(img, idx){
+      img.addEventListener('click', function(){
+        showGalleryImg(idx);
+      });
+    });
+
+    document.getElementById('galleryPrev').addEventListener('click', function(e){
+      e.stopPropagation();
+      showGalleryImg(currentIdx - 1);
+    });
+
+    document.getElementById('galleryNext').addEventListener('click', function(e){
+      e.stopPropagation();
+      showGalleryImg(currentIdx + 1);
+    });
+
+    document.getElementById('galleryModal').addEventListener('hidden.bs.modal', function () {
+      modalImg.src = '';
+      modalCaption.textContent = '';
+      currentIdx = 0;
+    });
+
+    // Dark mode toggle
+    const darkSwitch = document.getElementById('darkModeSwitch');
+    // Cek preferensi awal
+    if (localStorage.getItem('pe-dark') === '1' || (window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('pe-dark'))) {
+      document.body.classList.add('dark-mode');
+      darkSwitch.checked = true;
+    }
+    darkSwitch.addEventListener('change', function() {
+      if (this.checked) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('pe-dark', '1');
+      } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('pe-dark', '0');
+      }
+    });
+  </script>
+
+  <!-- Live Chat Konsultasi WhatsApp -->
+<a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20konsultasi%20aplikasi%20gizi%20di%20PediaExpert" 
+   class="livechat-wa" target="_blank" title="Konsultasi via WhatsApp">
+  <i class="bi bi-whatsapp"></i> Konsultasi Aplikasi
+</a>
+
+<style>
+.livechat-wa {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1050;
+  background: #25d366;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background .2s;
+}
+.livechat-wa:hover {
+  background: #128c7e;
+  color: #fff;
+  text-decoration: none;
+}
+.livechat-wa i {
+  font-size: 1.5rem;
+}
+@media (max-width: 575.98px) {
+  .livechat-wa {
+    padding: 10px 14px;
+    font-size: 1rem;
+    right: 12px;
+    bottom: 12px;
+  }
+}
+</style>
+
+
+<!-- 
+<section id="press-release" class="section pt-0">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Press Release Kegiatan</h2>
+      <p class="text-secondary">Berita dan publikasi resmi dari setiap kegiatan PediaExpert.</p>
+    </div>
+    <div class="row g-4">
+    
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/images/staff-khusus-wapres-achmad-adhitya.jpeg" class="card-img-top" alt="Press Release 1">
+          <div class="card-body">
+            <h5 class="card-title">Presentasi dengan Staf Khusus Wapres</h5>
+            <p class="card-text small text-secondary">Malang, 12 September 2025</p>
+            <p class="card-text">PediaExpert memaparkan inovasi chatbot gizi anak di hadapan Staf Khusus Wakil Presiden RI, Achmad Adhitya, Ph.D., untuk mendukung percepatan penurunan stunting nasional.</p>
+            <a href="press-release-1.html" class="btn btn-outline-primary btn-sm" target="_blank">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/images/wamen-komdigi-nezar-patria.jpeg" class="card-img-top" alt="Press Release 2">
+          <div class="card-body">
+            <h5 class="card-title">Presentasi dengan Wamen Komdigi</h5>
+            <p class="card-text small text-secondary">Malang, 29 September 2025</p>
+            <p class="card-text">PediaExpert presentasi ke Wakil Menteri Komunikasi dan Digital, Nezar Patria, S.Fil., M.Sc., M.B.A., dalam rangka penguatan transformasi digital terapi kesehatan gizi anak.</p>
+            <a href="press-release-2.html" class="btn btn-outline-primary btn-sm" target="_blank">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/images/demo-pediaexpert-rssa.jpeg" class="card-img-top" alt="Press Release 3">
+          <div class="card-body">
+            <h5 class="card-title">Demo & Uji Coba di RSUD Dr. Saiful Anwar</h5>
+            <p class="card-text small text-secondary">Malang, 3 September 2025</p>
+            <p class="card-text">Tim PediaExpert melakukan demo dan uji coba aplikasi bersama tim gizi RSUD Dr. Saiful Anwar untuk meningkatkan efisiensi layanan gizi anak.</p>
+            <a href="press-release-3.html" class="btn btn-outline-primary btn-sm" target="_blank">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+-->
+
+  <!-- 
+  <footer id="contact" class="section pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h5 class="fw-bold">Kontak & Informasi</h5>
+          <ul class="list-unstyled mt-3 d-grid gap-2">
+            <li><i class="bi bi-globe2 me-2 text-primary"></i> <a class="text-decoration-none" href="#">www.pediaexpert.id</a></li>
+            <li><i class="bi bi-envelope me-2 text-primary"></i> <a class="text-decoration-none" href="mailto:fatyanosa@ub.ac.id">fatyanosa@ub.ac.id</a></li>
+            <li><i class="bi bi-building me-2 text-primary"></i> AI Center, Universitas Brawijaya</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h5 class="fw-bold">Dukungan & Sumber Daya</h5>
+          <ul class="list-unstyled mt-3 d-grid gap-2 text-secondary">
+            <li><i class="bi bi-check2 me-2 text-primary"></i>Dokumentasi cepat mulai</li>
+            <li><i class="bi bi-check2 me-2 text-primary"></i>Kebijakan privasi & keamanan</li>
+            <li><i class="bi bi-check2 me-2 text-primary"></i>Pusat bantuan & pelatihan</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4" />
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+        <div class="small">© <span id="year"></span> PediaExpert. All rights reserved.</div>
+        
+      </div>
+    </div>
+  </footer>
+-->
+  
+  <!--
+<a id="backToTop" href="#home" title="Kembali ke atas">
+  <i class="bi bi-arrow-up"></i>
+</a>
+-->
+
+  
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // --- FILTER KATEGORI GALERI ---
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryGrid = document.getElementById('galleryGrid');
+    let galleryImgs = [];
+    const modalImg = document.getElementById('galleryModalImg');
+    const modalCaption = document.getElementById('galleryModalCaption');
+    let currentIdx = 0;
+
+    // Fungsi update daftar gambar yang tampil
+    function updateGalleryImgs() {
+      galleryImgs = Array.from(document.querySelectorAll('.gallery-item'))
+        .filter(item => item.style.display !== 'none')
+        .map(item => item.querySelector('.gallery-img'));
+    }
+
+    // Filter kategori
+    filterButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.getAttribute('data-filter');
+        galleryItems.forEach(function(item) {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        updateGalleryImgs();
+      });
+    });
+
+    // Modal preview & navigasi
+    function showGalleryImg(idx) {
+      if (galleryImgs.length === 0) return;
+      if (idx < 0) idx = galleryImgs.length - 1;
+      if (idx >= galleryImgs.length) idx = 0;
+      currentIdx = idx;
+      modalImg.src = galleryImgs[idx].src;
+      modalImg.alt = galleryImgs[idx].alt;
+      modalCaption.textContent = galleryImgs[idx].getAttribute('data-caption') || '';
+    }
+
+    // Event click untuk gambar yang tampil saja
+    galleryGrid.addEventListener('click', function(e) {
+      if (e.target.classList.contains('gallery-img')) {
+        updateGalleryImgs();
+        const idx = galleryImgs.indexOf(e.target);
+        if (idx !== -1) showGalleryImg(idx);
+      }
+    });
+
+    document.getElementById('galleryPrev').addEventListener('click', function(e){
+      e.stopPropagation();
+      showGalleryImg(currentIdx - 1);
+    });
+
+    document.getElementById('galleryNext').addEventListener('click', function(e){
+      e.stopPropagation();
+      showGalleryImg(currentIdx + 1);
+    });
+
+    document.getElementById('galleryModal').addEventListener('hidden.bs.modal', function () {
+      modalImg.src = '';
+      modalCaption.textContent = '';
+      currentIdx = 0;
+    });
+
+    // Inisialisasi awal
+    updateGalleryImgs();
+  });
+  </script>
+
+  <!-- 
+<a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20konsultasi%20aplikasi%20gizi%20di%20PediaExpert" 
+   class="livechat-wa" target="_blank" title="Konsultasi via WhatsApp">
+  <i class="bi bi-whatsapp"></i> Konsultasi Aplikasi
+</a>
+-->
+
+<style>
+.livechat-wa {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1050;
+  background: #25d366;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background .2s;
+}
+.livechat-wa:hover {
+  background: #128c7e;
+  color: #fff;
+  text-decoration: none;
+}
+.livechat-wa i {
+  font-size: 1.5rem;
+}
+@media (max-width: 575.98px) {
+  .livechat-wa {
+    padding: 10px 14px;
+    font-size: 1rem;
+    right: 12px;
+    bottom: 12px;
+  }
+}
+</style>
+
+
+<!-- 
+<section id="press-release" class="section pt-0">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Press Release Kegiatan</h2>
+      <p class="text-secondary">Berita dan publikasi resmi dari setiap kegiatan PediaExpert.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/images/staff-khusus-wapres-achmad-adhitya.jpeg" class="card-img-top" alt="Press Release 1">
+          <div class="card-body">
+            <h5 class="card-title">Presentasi dengan Staf Khusus Wapres</h5>
+            <p class="card-text small text-secondary">Malang, 12 September 2025</p>
+            <p class="card-text">PediaExpert memaparkan inovasi chatbot gizi anak di hadapan Staf Khusus Wakil Presiden RI, Achmad Adhitya, Ph.D., untuk mendukung percepatan penurunan stunting nasional.</p>
+            <a href="press-release-1.html" class="btn btn-outline-primary btn-sm" target="_blank">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/images/wamen-komdigi-nezar-patria.jpeg" class="card-img-top" alt="Press Release 2">
+          <div class="card-body">
+            <h5 class="card-title">Presentasi dengan Wamen Komdigi</h5>
+            <p class="card-text small text-secondary">Malang, 29 September 2025</p>
+            <p class="card-text">PediaExpert presentasi ke Wakil Menteri Komunikasi dan Digital, Nezar Patria, S.Fil., M.Sc., M.B.A., dalam rangka penguatan transformasi digital terapi kesehatan gizi anak.</p>
+            <a href="press-release-2.html" class="btn btn-outline-primary btn-sm" target="_blank">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/images/demo-pediaexpert-rssa.jpeg" class="card-img-top" alt="Press Release 3">
+          <div class="card-body">
+            <h5 class="card-title">Demo & Uji Coba di RSUD Dr. Saiful Anwar</h5>
+            <p class="card-text small text-secondary">Malang, 3 September 2025</p>
+            <p class="card-text">Tim PediaExpert melakukan demo dan uji coba aplikasi bersama tim gizi RSUD Dr. Saiful Anwar untuk meningkatkan efisiensi layanan gizi anak.</p>
+            <a href="press-release-3.html" class="btn btn-outline-primary btn-sm" target="_blank">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+  <!--
+  <footer id="contact" class="section pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h5 class="fw-bold">Kontak & Informasi</h5>
+          <ul class="list-unstyled mt-3 d-grid gap-2">
+            <li><i class="bi bi-globe2 me-2 text-primary"></i> <a class="text-decoration-none" href="#">www.pediaexpert.id</a></li>
+            <li><i class="bi bi-envelope me-2 text-primary"></i> <a class="text-decoration-none" href="mailto:fatyanosa@ub.ac.id">fatyanosa@ub.ac.id</a></li>
+            <li><i class="bi bi-building me-2 text-primary"></i> AI Center, Universitas Brawijaya</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h5 class="fw-bold">Dukungan & Sumber Daya</h5>
+          <ul class="list-unstyled mt-3 d-grid gap-2 text-secondary">
+            <li><i class="bi bi-check2 me-2 text-primary"></i>Dokumentasi cepat mulai</li>
+            <li><i class="bi bi-check2 me-2 text-primary"></i>Kebijakan privasi & keamanan</li>
+            <li><i class="bi bi-check2 me-2 text-primary"></i>Pusat bantuan & pelatihan</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4" />
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+        <div class="small">© <span id="year"></span> PediaExpert. All rights reserved.</div>
+        
+      </div>
+    </div>
+  </footer>
+-->
+  <!--
+<a id="backToTop" href="#home" title="Kembali ke atas">
+  <i class="bi bi-arrow-up"></i>
+</a>
+-->
+
+  
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // --- FILTER KATEGORI GALERI ---
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryGrid = document.getElementById('galleryGrid');
+    let galleryImgs = [];
+    const modalImg = document.getElementById('galleryModalImg');
+    const modalCaption = document.getElementById('galleryModalCaption');
+    let currentIdx = 0;
+
+    // Fungsi update daftar gambar yang tampil
+    function updateGalleryImgs() {
+      galleryImgs = Array.from(document.querySelectorAll('.gallery-item'))
+        .filter(item => item.style.display !== 'none')
+        .map(item => item.querySelector('.gallery-img'));
+    }
+
+    // Filter kategori
+    filterButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.getAttribute('data-filter');
+        galleryItems.forEach(function(item) {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        updateGalleryImgs();
+      });
+    });
+
+    // Modal preview & navigasi
+    function showGalleryImg(idx) {
+      if (galleryImgs.length === 0) return;
+      if (idx < 0) idx = galleryImgs.length - 1;
+      if (idx >= galleryImgs.length) idx = 0;
+      currentIdx = idx;
+      modalImg.src = galleryImgs[idx].src;
+      modalImg.alt = galleryImgs[idx].alt;
+      modalCaption.textContent = galleryImgs[idx].getAttribute('data-caption') || '';
+    }
+
+    // Event click untuk gambar yang tampil saja
+    galleryGrid.addEventListener('click', function(e) {
+      if (e.target.classList.contains('gallery-img')) {
+        updateGalleryImgs();
+        const idx = galleryImgs.indexOf(e.target);
+        if (idx !== -1) showGalleryImg(idx);
+      }
+    });
+
+    document.getElementById('galleryPrev').addEventListener('click', function(e){
+      e.stopPropagation();
+      showGalleryImg(currentIdx - 1);
+    });
+
+    document.getElementById('galleryNext').addEventListener('click', function(e){
+      e.stopPropagation();
+      showGalleryImg(currentIdx + 1);
+    });
+
+    document.getElementById('galleryModal').addEventListener('hidden.bs.modal', function () {
+      modalImg.src = '';
+      modalCaption.textContent = '';
+      currentIdx = 0;
+    });
+
+    // Inisialisasi awal
+    updateGalleryImgs();
+  });
+  </script>
+
+  <!-- 
+<a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20konsultasi%20aplikasi%20gizi%20di%20PediaExpert" 
+   class="livechat-wa" target="_blank" title="Konsultasi via WhatsApp">
+  <i class="bi bi-whatsapp"></i> Konsultasi Aplikasi
+</a>
+-->
+
+<style>
+.livechat-wa {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1050;
+  background: #25d366;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background .2s;
+}
+.livechat-wa:hover {
+  background: #128c7e;
+  color: #fff;
+  text-decoration: none;
+}
+.livechat-wa i {
+  font-size: 1.5rem;
+}
+@media (max-width: 575.98px) {
+  .livechat-wa {
+    padding: 10px 14px;
+    font-size: 1rem;
+    right: 12px;
+    bottom: 12px;
+  }
+}
+</style>
+
+
+<!-- Press Release Section -->
+<section id="press-release" class="section pt-0">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Press Release Kegiatan</h2>
+      <p class="text-secondary">Berita dan publikasi resmi dari setiap kegiatan PediaExpert.</p>
+    </div>
+    <div class="row g-4">
+      <!-- Contoh Press Release 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/images/staff-khusus-wapres-achmad-adhitya.jpeg" class="card-img-top" alt="Press Release 1">
+          <div class="card-body">
+            <h5 class="card-title">Presentasi dengan Staf Khusus Wapres</h5>
+            <p class="card-text small text-secondary">Malang, 12 September 2025</p>
+            <p class="card-text">PediaExpert memaparkan inovasi chatbot gizi anak di hadapan Staf Khusus Wakil Presiden RI, Achmad Adhitya, Ph.D., untuk mendukung percepatan penurunan stunting nasional.</p>
+            <a href="press-release-1.html" class="btn btn-outline-primary btn-sm" target="_blank">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <!-- Contoh Press Release 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/images/wamen-komdigi-nezar-patria.jpeg" class="card-img-top" alt="Press Release 2">
+          <div class="card-body">
+            <h5 class="card-title">Presentasi dengan Wamen Komdigi</h5>
+            <p class="card-text small text-secondary">Malang, 29 September 2025</p>
+            <p class="card-text">PediaExpert presentasi ke Wakil Menteri Komunikasi dan Digital, Nezar Patria, S.Fil., M.Sc., M.B.A., dalam rangka penguatan transformasi digital terapi kesehatan gizi anak.</p>
+            <a href="press-release-2.html" class="btn btn-outline-primary btn-sm" target="_blank">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <!-- Contoh Press Release 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/images/demo-pediaexpert-rssa.jpeg" class="card-img-top" alt="Press Release 3">
+          <div class="card-body">
+            <h5 class="card-title">Demo & Uji Coba di RSUD Dr. Saiful Anwar</h5>
+            <p class="card-text small text-secondary">Malang, 3 September 2025</p>
+            <p class="card-text">Tim PediaExpert melakukan demo dan uji coba aplikasi bersama tim gizi RSUD Dr. Saiful Anwar untuk meningkatkan efisiensi layanan gizi anak.</p>
+            <a href="press-release-3.html" class="btn btn-outline-primary btn-sm" target="_blank">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <!-- Tambahkan press release lain sesuai kebutuhan -->
+    </div>
+  </div>
+</section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact" class="section pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h5 class="fw-bold">Kontak & Informasi</h5>
+          <ul class="list-unstyled mt-3 d-grid gap-2">
+            <li><i class="bi bi-globe2 me-2 text-primary"></i> <a class="text-decoration-none" href="#">www.pediaexpert.id</a></li>
+            <li><i class="bi bi-envelope me-2 text-primary"></i> <a class="text-decoration-none" href="mailto:fatyanosa@ub.ac.id">fatyanosa@ub.ac.id</a></li>
+            <li><i class="bi bi-building me-2 text-primary"></i> AI Center, Universitas Brawijaya</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h5 class="fw-bold">Dukungan & Sumber Daya</h5>
+          <ul class="list-unstyled mt-3 d-grid gap-2 text-secondary">
+            <li><i class="bi bi-check2 me-2 text-primary"></i>Dokumentasi cepat mulai</li>
+            <li><i class="bi bi-check2 me-2 text-primary"></i>Kebijakan privasi & keamanan</li>
+            <li><i class="bi bi-check2 me-2 text-primary"></i>Pusat bantuan & pelatihan</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4" />
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+        <div class="small">© <span id="year"></span> PediaExpert. All rights reserved.</div>
+        
+      </div>
+    </div>
+  </footer>
+  
+<a id="backToTop" href="#home" title="Kembali ke atas">
+  <i class="bi bi-arrow-up"></i>
+</a>
+
+
+  
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // --- FILTER KATEGORI GALERI ---
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryGrid = document.getElementById('galleryGrid');
+    let galleryImgs = [];
+    const modalImg = document.getElementById('galleryModalImg');
+    const modalCaption = document.getElementById('galleryModalCaption');
+    let currentIdx = 0;
+
+    // Fungsi update daftar gambar yang tampil
+    function updateGalleryImgs() {
+      galleryImgs = Array.from(document.querySelectorAll('.gallery-item'))
+        .filter(item => item.style.display !== 'none')
+        .map(item => item.querySelector('.gallery-img'));
+    }
+
+    // Filter kategori
+    filterButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.getAttribute('data-filter');
+        galleryItems.forEach(function(item) {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        updateGalleryImgs();
+      });
+    });
+
+    // Modal preview & navigasi
+    function showGalleryImg(idx) {
+      if (galleryImgs.length === 0) return;
+      if (idx < 0) idx = galleryImgs.length - 1;
+      if (idx >= galleryImgs.length) idx = 0;
+      currentIdx = idx;
+      modalImg.src = galleryImgs[idx].src;
+      modalImg.alt = galleryImgs[idx].alt;
+      modalCaption.textContent = galleryImgs[idx].getAttribute('data-caption') || '';
+    }
+
+    // Event click untuk gambar yang tampil saja
+    galleryGrid.addEventListener('click', function(e) {
+      if (e.target.classList.contains('gallery-img')) {
+        updateGalleryImgs();
+        const idx = galleryImgs.indexOf(e.target);
+        if (idx !== -1) showGalleryImg(idx);
+      }
+    });
+
+    document.getElementById('galleryPrev').addEventListener('click', function(e){
+      e.stopPropagation();
+      showGalleryImg(currentIdx - 1);
+    });
+
+    document.getElementById('galleryNext').addEventListener('click', function(e){
+      e.stopPropagation();
+      showGalleryImg(currentIdx + 1);
+    });
+
+    document.getElementById('galleryModal').addEventListener('hidden.bs.modal', function () {
+      modalImg.src = '';
+      modalCaption.textContent = '';
+      currentIdx = 0;
+    });
+
+    // Inisialisasi awal
+    updateGalleryImgs();
+  });
+  </script>
+
+  <!-- Live Chat Konsultasi WhatsApp -->
+<a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20konsultasi%20aplikasi%20gizi%20di%20PediaExpert" 
+   class="livechat-wa" target="_blank" title="Konsultasi via WhatsApp">
+  <i class="bi bi-whatsapp"></i> Konsultasi Aplikasi
+</a>
+
+<style>
+.livechat-wa {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1050;
+  background: #25d366;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background .2s;
+}
+.livechat-wa:hover {
+  background: #128c7e;
+  color: #fff;
+  text-decoration: none;
+}
+.livechat-wa i {
+  font-size: 1.5rem;
+}
+@media (max-width: 575.98px) {
+  .livechat-wa {
+    padding: 10px 14px;
+    font-size: 1rem;
+    right: 12px;
+    bottom: 12px;
+  }
+}
+</style>
+
+
 </body>
 </html>
