@@ -368,6 +368,130 @@
       </div>
     </div>
   </section>
+
+ 
+  </section>
+  <!--
+  <section id="awards" class="section pt-0">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Sertifikat & Penghargaan</h2>
+        <p class="text-secondary">Pengakuan atas inovasi PediaExpert — klik badge untuk melihat detail.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 text-center p-3">
+            <img src="assets/images/award-innotech.png" alt="Innotech Award 2025" class="img-fluid mb-3" style="height:120px;object-fit:contain;">
+            <h6 class="fw-bold mb-1">Innotech Award 2025</h6>
+            <div class="small text-secondary">Inovasi Teknologi Kesehatan</div>
+            <button type="button" class="btn btn-outline-primary btn-sm mt-3 award-btn"
+                    data-title="Innotech Award 2025"
+                    data-img="assets/images/award-innotech.png"
+                    data-desc="Diberikan oleh Kementerian Kesehatan RI atas kontribusi dalam digitalisasi layanan gizi anak.">
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 text-center p-3">
+            <img src="assets/images/award-ai-center.png" alt="AI Center Recognition" class="img-fluid mb-3" style="height:120px;object-fit:contain;">
+            <h6 class="fw-bold mb-1">AI Center Recognition</h6>
+            <div class="small text-secondary">Penghargaan Inovasi AI Terapan</div>
+            <button type="button" class="btn btn-outline-primary btn-sm mt-3 award-btn"
+                    data-title="AI Center Recognition"
+                    data-img="assets/images/award-ai-center.png"
+                    data-desc="Penghargaan dari AI Center Universitas Brawijaya atas pengembangan solusi AI untuk kesehatan anak.">
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 text-center p-3">
+            <img src="assets/images/award-community.png" alt="Community Impact Award" class="img-fluid mb-3" style="height:120px;object-fit:contain;">
+            <h6 class="fw-bold mb-1">Community Impact Award</h6>
+            <div class="small text-secondary">Penghargaan Dampak Sosial</div>
+            <button type="button" class="btn btn-outline-primary btn-sm mt-3 award-btn"
+                    data-title="Community Impact Award"
+                    data-img="assets/images/award-community.png"
+                    data-desc="Mengapresiasi kontribusi PediaExpert dalam program edukasi gizi masyarakat dan pencegahan stunting.">
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="modal fade" id="awardModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="awardModalTitle"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="awardModalImg" src="" class="img-fluid mb-3" alt="" style="max-height:380px; object-fit:contain;">
+            <p id="awardModalDesc" class="text-secondary"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const awardButtons = document.querySelectorAll('.award-btn');
+      const modalEl = document.getElementById('awardModal');
+      const modalTitle = document.getElementById('awardModalTitle');
+      const modalImg = document.getElementById('awardModalImg');
+      const modalDesc = document.getElementById('awardModalDesc');
+
+      awardButtons.forEach(btn => btn.addEventListener('click', function () {
+        const title = this.dataset.title || '';
+        const img = this.dataset.img || '';
+        const desc = this.dataset.desc || '';
+        modalTitle.textContent = title;
+        modalImg.src = img;
+        modalImg.alt = title;
+        modalDesc.textContent = desc;
+        const modal = new bootstrap.Modal(modalEl);
+        modal.show();
+      }));
+    });
+  </script>
+-->
+  
+
+<!-- Tambahkan setelah section gallery dan sebelum events -->
+<section id="video-testimonials" class="section pt-0">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Testimoni Video RSUD Dr. Saiful Anwar</h2>
+      <p class="text-secondary">Pengalaman penggunaan PediaExpert di RSUD Dr. Saiful Anwar Malang oleh Ahli Gizi</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <!-- Video Testimoni Tunggal -->
+      <div class="col-lg-8">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="ratio ratio-16x9 rounded-4">
+            <iframe src="https://www.youtube.com/embed/u6vKpaIsmTQ?si=DkAMnU41IszSycDU" 
+                    title="Testimoni Kepala dan Anggota Instalasi Gizi RSSA"
+                    allowfullscreen></iframe>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Adji Hambali, SST, RD dan juga Anggota-angota Instalasi Gizi</h5>
+            <p class="card-text small text-secondary">Kepala dan Anggota Instalasi Gizi RSSA Malang</p>
+            <p class="card-text">"PediaExpert membantu meningkatkan efisiensi terapi Gizi Anak di RSSA dengan dukungan evidence-based medicine."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   
 
   <!-- TESTIMONIAL / QUOTE -->
@@ -415,6 +539,29 @@
             </div>
           </div>
           <!-- Akhir testimonial tambahan -->
+
+          <!-- Testimonial tambahan dari Anggota DPR -->
+          <div class="carousel-item">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-7">
+                <div class="bubble">
+                  <i class="bi bi-quote display-5 text-primary"></i>
+                  <p class="fs-5 mb-0">“PediaExpert.id adalah inovasi digital karya anak bangsa yang patut diapresiasi karena mampu mengintegrasikan ilmu gizi dan teknologi untuk meningkatkan kualitas layanan kesehatan anak di Indonesia. Saya mengenal langsung para expert di PediaExpert ini, mereka profesional yang kompeten, berdedikasi, dan memiliki visi kuat terhadap kemajuan gizi anak bangsa. Sebagai anggota Komisi IX DPR RI yang membidangi kesehatan, saya melihat platform ini sangat sejalan dengan agenda transformasi kesehatan nasional, khususnya dalam pencegahan stunting, peningkatan status gizi, dan penguatan pelayanan primer. PediaExpert.id sangat layak untuk diperluas ke tingkat nasional karena dapat menjadi bagian penting dari solusi menuju generasi emas Indonesia yang sehat dan cerdas.”</p>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="d-flex align-items-center gap-3">
+                  <img src="assets/images/gamal-albinsaid.jpg" class="rounded-circle" width="200" height="200" alt="Wakil Menteri Komdigi" />
+                  <div>
+                    <div class="fw-bold">dr. Gamal Albinsaid, M.Biomed.</div>
+                    <div class="text-secondary small">Anggota Komisi IX DPR RI (Bidang Kesehatan, Ketenagakerjaan, dan Jaminan Sosial)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Akhir testimonial tambahan -->
+
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon bg-primary rounded-circle" aria-hidden="true"></span>
@@ -580,6 +727,8 @@
       <button class="btn btn-outline-primary btn-sm" data-filter="wapres" type="button">Presentasi dengan Staf Khusus Wapres</button>
       <button class="btn btn-outline-primary btn-sm" data-filter="komdigi" type="button">Presentasi dengan Wamen Komdigi</button>
       <button class="btn btn-outline-primary btn-sm" data-filter="lainnya" type="button">Demo dan Pengujian Aplikasi di RSUD Dr. Saiful Anwar</button>
+      <button class="btn btn-outline-primary btn-sm" data-filter="Japan International Cooperation Agency (JICA)" type="button">Presentasi dengan Perwakilan Japan International Cooperation Agency (JICA)</button>
+      <button class="btn btn-outline-primary btn-sm" data-filter="Presentasi dan Demo Aplikasi dengan dr Gamal" type="button">Demo Aplikasi dengan dr. Gamal Albinsaid (Anggota Komisi IX DPR RI)</button>
     </div>
     <div class="row g-3" id="galleryGrid">
       <!-- Kategori Wapres: lebih dari 5 foto -->
@@ -619,8 +768,45 @@
         <img src="assets/images/wamen-komdigi-nezar-patria-5.jpg" class="img-fluid rounded-3 gallery-img" alt="Komdigi 5" data-caption="Presentasi dengan Wamen Komdigi, Nezar Patria, S.Fil., M.Sc., M.B.A., #5" data-bs-toggle="modal" data-bs-target="#galleryModal" />
       </div>
 
+      <!-- Kategori Komdigi: lebih dari 5 foto -->
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="Japan International Cooperation Agency (JICA)">
+        <img src="assets/images/perwakilan-jica.jpeg" class="img-fluid rounded-3 gallery-img" alt="Komdigi 1" data-caption="Presentasi dengan Wamen Komdigi, Nezar Patria, S.Fil., M.Sc., M.B.A., #1" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="Japan International Cooperation Agency (JICA)">
+        <img src="assets/images/perwakilan-jica-2.jpeg" class="img-fluid rounded-3 gallery-img" alt="Komdigi 2" data-caption="Presentasi dengan Wamen Komdigi, Nezar Patria, S.Fil., M.Sc., M.B.A., #2" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="Japan International Cooperation Agency (JICA)">
+        <img src="assets/images/perwakilan-jica-3.jpeg" class="img-fluid rounded-3 gallery-img" alt="Komdigi 3" data-caption="Presentasi dengan Wamen Komdigi, Nezar Patria, S.Fil., M.Sc., M.B.A., #3" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="Japan International Cooperation Agency (JICA)">
+        <img src="assets/images/perwakilan-jica-4.jpeg" class="img-fluid rounded-3 gallery-img" alt="Komdigi 4" data-caption="Presentasi dengan Wamen Komdigi, Nezar Patria, S.Fil., M.Sc., M.B.A., #4" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="Japan International Cooperation Agency (JICA)">
+        <img src="assets/images/perwakilan-jica-5.jpeg" class="img-fluid rounded-3 gallery-img" alt="Komdigi 5" data-caption="Presentasi dengan Wamen Komdigi, Nezar Patria, S.Fil., M.Sc., M.B.A., #5" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="Japan International Cooperation Agency (JICA)">
+        <img src="assets/images/perwakilan-jica-6.jpeg" class="img-fluid rounded-3 gallery-img" alt="Komdigi 5" data-caption="Presentasi dengan Wamen Komdigi, Nezar Patria, S.Fil., M.Sc., M.B.A., #5" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="Presentasi dan Demo Aplikasi dengan dr Gamal">
+        <img src="assets/images/dr-gamal.jpeg" class="img-fluid rounded-3 gallery-img" alt="Komdigi 1" data-caption="Presentasi dan Demo dengan dr. Gamal Albinsaid, M.Biomed. (Anggota Komisi IX DPR RI), #1" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="Presentasi dan Demo Aplikasi dengan dr Gamal">
+        <img src="assets/images/dr-gamal-2.jpeg" class="img-fluid rounded-3 gallery-img" alt="Komdigi 2" data-caption="Presentasi dan Demo dengan dr. Gamal Albinsaid, M.Biomed. (Anggota Komisi IX DPR RI), #2" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="Presentasi dan Demo Aplikasi dengan dr Gamal">
+        <img src="assets/images/dr-gamal-3.jpeg" class="img-fluid rounded-3 gallery-img" alt="Komdigi 3" data-caption="Presentasi MBG, #3" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="Presentasi dan Demo Aplikasi dengan dr Gamal">
+        <img src="assets/images/dr-gamal-4.jpeg" class="img-fluid rounded-3 gallery-img" alt="Komdigi 4" data-caption="Presentasi MBG, #4" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="Presentasi dan Demo Aplikasi dengan dr Gamal">
+        <img src="assets/images/dr-gamal--5.jpeg" class="img-fluid rounded-3 gallery-img" alt="Komdigi 5" data-caption="Presentasi MBG, #5" data-bs-toggle="modal" data-bs-target="#galleryModal" />
+      </div>
+
+
       <!-- Kategori Lainnya: lebih dari 5 foto -->
-      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="lainnya">
+      <div class="col-6 col-md-4 col-lg-3 gallery-item"  data-category="lainnya">
         <img src="assets/images/demo-pediaexpert-rssa.jpeg" class="img-fluid rounded-3 gallery-img" alt="Demo RS 1" data-caption="Demo dan pengujian aplikasi di RS #1" data-bs-toggle="modal" data-bs-target="#galleryModal" />
       </div>
       <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="lainnya">
@@ -1482,6 +1668,30 @@
             <p class="card-text small text-secondary">Malang, 3 September 2025</p>
             <p class="card-text">Tim PediaExpert melakukan demo dan uji coba aplikasi bersama tim gizi RSUD Dr. Saiful Anwar untuk meningkatkan efisiensi layanan gizi anak.</p>
             <a href="press-release-3.html" class="btn btn-outline-primary btn-sm" target="_blank">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <!-- Tambahkan press release lain sesuai kebutuhan -->
+        <!-- Contoh Press Release 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/images/perwakilan-jica-6.jpeg" class="card-img-top" alt="Press Release 3">
+          <div class="card-body">
+            <h5 class="card-title">Presentasi & Demo dengan JICA</h5>
+            <p class="card-text small text-secondary">Malang, 17 Oktober 2025</p>
+            <p class="card-text">Tim PediaExpert melakukan presentasi dan demo aplikasi bersama JICA (Japan International Cooperation Agency)</p>
+            <a href="press-release-4.html" class="btn btn-outline-primary btn-sm" target="_blank">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/images/dr-gamal.jpeg" class="card-img-top" alt="Press Release 3">
+          <div class="card-body">
+            <h5 class="card-title">Presentasi & Demo dengan dr. Gamal Albinsaid, M.Biomed. (Komisi IX DPR RI) </h5>
+            <p class="card-text small text-secondary">Malang, 28 Oktober 2025</p>
+            <p class="card-text">Tim PediaExpert melakukan presentasi dan demo aplikasi bersama dr. Gamal Albinsaid, M.Biomed. (Komisi IX DPR RI)</p>
+            <a href="press-release-5.html" class="btn btn-outline-primary btn-sm" target="_blank">Baca Selengkapnya</a>
           </div>
         </div>
       </div>
